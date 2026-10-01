@@ -45,10 +45,14 @@
         <td>Only if you report something</td><td>Reviewing copyright or content complaints</td></tr>
     <tr><td><strong>Advertising data:</strong> advertising ID, IP address, device and app information, ad interactions</td>
         <td>Free users, when ads load</td><td>Collected by Google AdMob to show and measure ads (see section 4)</td></tr>
+    <tr><td><strong>Subscription data:</strong> which plan you bought, trial and renewal status, and an app user ID (your account ID if you're signed in, otherwise a random ID). We never see your card or payment details</td>
+        <td>Only if you subscribe or restore purchases</td><td>Unlocking Premium on your devices, through Google Play Billing and RevenueCat (see section 4)</td></tr>
+    <tr><td><strong>Notification data:</strong> a push token for your device and the notification topics you're subscribed to (new wallpapers, daily wallpaper)</td>
+        <td>If notifications are on</td><td>Sending the notifications you chose, through Firebase Cloud Messaging. You can turn each one off in the app or in Android settings</td></tr>
   </table>
   <p>We do <strong>not</strong> access your photos, contacts, location, camera or microphone. The app saves wallpapers you
     choose to download to your gallery and sets your wallpaper only when you ask it to.</p>
-  <!-- TODO before launch: if Firebase Analytics/Crashlytics/Cloud Messaging or subscriptions are added, update sections 2 and 4 and the Play Data safety form. -->
+  <!-- Keep in sync with the Play Data safety form. If Firebase Analytics or Crashlytics are added, add them to sections 2 and 4. -->
 
   <h2>3. How we use it</h2>
   <ul>
@@ -68,6 +72,12 @@
         <td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td></tr>
     <tr><td>Google AdMob and the User Messaging Platform</td><td>Showing ads and collecting ad consent</td>
         <td><a href="https://policies.google.com/technologies/partner-sites">How Google uses data from apps</a></td></tr>
+    <tr><td>Google Play Billing</td><td>Processing subscription payments (Google handles all payment details)</td>
+        <td><a href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&amp;ldt=privacynotice">Google Payments privacy notice</a></td></tr>
+    <tr><td>RevenueCat</td><td>Checking which subscription you have and sharing it across your devices. Receives your app user ID and purchase history from Google Play</td>
+        <td><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td></tr>
+    <tr><td>Firebase Cloud Messaging (Google)</td><td>Delivering push notifications</td>
+        <td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
     <tr><td>Google Sign-In</td><td>Optional sign-in with your Google account</td>
         <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
     <tr><td>GitHub Pages</td><td>Hosting the wallpaper image files. Your device downloads images from it, which exposes your IP address to GitHub</td>
@@ -95,7 +105,9 @@
     or request a copy of your data.</p>
   <ul>
     <li><strong>In the app:</strong> <em>Profile → Delete account</em> permanently deletes your account, favourites, unlocks
-      and preferences. Your past usage events are kept only in anonymised form (unlinked from you) until they expire.</li>
+      and style preferences, on our servers and on that device. Your past usage events are kept only in anonymised form
+      (unlinked from you) until they expire. Deleting your account does <strong>not</strong> cancel a subscription: cancel it in
+      Google Play first. Google and RevenueCat keep purchase records as required for billing, tax and fraud prevention.</li>
     <li><strong>Without the app:</strong> follow the steps on our <a href="delete-account.html">account deletion page</a>.</li>
     <li><strong>Anything else:</strong> email <mark class="todo">[contact email]</mark>. We reply within 30 days.</li>
   </ul>
