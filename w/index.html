@@ -12,7 +12,7 @@
   <style>
     .share { min-height: 100vh; display: grid; place-items: center; padding: 32px 16px; }
     .share-card { width: 100%; max-width: 380px; text-align: center; }
-    .share-card svg { width: 84px; height: 84px; display: block; margin: 0 auto 20px; filter: drop-shadow(0 10px 22px rgba(106, 63, 224, 0.35)); }
+    .share-card .mark { width: 84px; height: 84px; display: block; margin: 0 auto 20px; }
     .share-card h1 { font-size: 26px; margin: 0 0 6px; }
     .share-card p { color: var(--muted); margin: 0 0 24px; }
     .share-card .btn { display: block; padding: 14px 20px; font-size: 17px; }
@@ -20,24 +20,12 @@
     .share-card .small { font-size: 14px; margin-top: 22px; }
     [hidden] { display: none !important; }
   </style>
+  <link rel="icon" type="image/png" href="../favicon.png">
 </head>
 <body>
 <main class="share">
   <div class="share-card">
-    <svg viewBox="0 0 40 40" aria-hidden="true">
-      <defs>
-        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a585ff"/><stop offset=".5" stop-color="#6a3fe0"/><stop offset="1" stop-color="#2b1570"/></linearGradient>
-        <linearGradient id="sh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/></linearGradient>
-        <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#c8f7e6"/></linearGradient>
-      </defs>
-      <rect width="40" height="40" rx="11" fill="url(#bg)"/>
-      <rect width="40" height="40" rx="11" fill="url(#sh)"/>
-      <rect x="8.5" y="7.5" width="16" height="24" rx="4" fill="#fff" fill-opacity=".32" transform="rotate(-14 16.5 19.5)"/>
-      <g transform="rotate(8 23.5 20.5)">
-        <rect x="15.5" y="8.5" width="16" height="24" rx="4" fill="url(#fg)"/>
-        <path transform="translate(23.5 20.5)" fill="#6a3fe0" d="M0 -4.2C.55 -1.3 1.3 -.55 4.2 0C1.3 .55 .55 1.3 0 4.2C-.55 1.3 -1.3 .55 -4.2 0C-1.3 -.55 -.55 -1.3 0 -4.2Z"/>
-      </g>
-    </svg>
+    <img class="mark" src="../zeul-icon.png" width="84" height="84" alt="">
 
     <div id="ok">
       <h1>Someone shared a wallpaper with you</h1>
